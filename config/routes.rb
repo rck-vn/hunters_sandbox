@@ -13,11 +13,17 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root :to => "pages#index"
 
+  get 'profile' => 'pages#profile'
+
+  get 'create' => 'users#create'
+  get 'edit' => 'users#edit'
+  get 'delete' => 'users#delete'
+
   get 'pages' => 'pages#index'
 
   get 'hunt' => 'users#hunt'
   get 'sell' => 'users#sell'
-  get 'feed' => 'users#feed'
+  get 'feed' => 'products#index'
 
   get 'cart' => 'carts#show'
   get 'wishlist' => 'wishlist#index'
